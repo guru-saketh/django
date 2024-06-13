@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Django tutorialt</title>
+  </head>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+  <body>
+    <h1>welcome !!</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum,
+      repudiandae?
+    </p>
+    {{people}}
+
+    <table>
+      <tr>
+        <th>S.no</th>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+      {%for i in people%}
+      <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.age}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
